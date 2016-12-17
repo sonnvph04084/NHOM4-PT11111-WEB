@@ -134,8 +134,8 @@
 					  	<p class="m_2"><asp:Label ID="tenLabel" runat="server" Text='<%# Bind("mo_ta") %>' /></p>
 				         <div class="grid_img">
 						   <div class="css3">
-                               <!--<asp:Image id="Image10" runat="server" ImageUrl="<%# Bind('anh') %>" Width="320" Height="200"/>-->	
-                               <asp:Image id="Image11" runat="server" ImageUrl="~/Images/Product/giaynu2.JPG" Width="320" Height="200"/>
+                               <asp:Image id="Image10" runat="server" ImageUrl="<%# Bind('anh') %>" Width="320" Height="200"/>	
+                               <!--<asp:Image id="Image11" runat="server" ImageUrl="~/Images/Product/giaynu2.JPG" Width="320" Height="200"/>-->
 						   </div>					        
 	                    </div>
                        <div class="price"><asp:Label ID="giaLabel" runat="server" Text='<%# Bind("gia")%>' />VND</div>
