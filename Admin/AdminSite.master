@@ -1,0 +1,320 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminSite.master.cs" Inherits="Admin_AdminSite" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>AdminLTE 2 | Blank Page</title>
+      <!-- Tell the browser to be responsive to screen width -->
+      <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+      <!-- Bootstrap 3.3.6 -->
+      <link id="Link1" runat="server" href="admintheme/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+      <!-- Ionicons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+      <!-- Theme style -->
+      <link id="Link2" runat="server" href="admintheme/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" media="all" />
+      <link id="Link3" runat="server" href="admintheme/dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" media="all" />
+            <!-- jQuery 2.2.3 -->
+        <script src="<%: ResolveUrl("admintheme/plugin/jQuery/jquery-2.2.3.min.js") %>"></script>
+        <!-- Bootstrap 3.3.6 -->
+        <script src="<%: ResolveUrl("admintheme/bootstrap/js/bootstrap.min.js") %>"></script>
+        <!-- SlimScroll -->
+        <script src="<%: ResolveUrl("admintheme/plugin/slimScroll/jquery.slimscroll.min.js") %>"></script>
+        <!-- FastClick -->
+        <script src="<%: ResolveUrl("admintheme/plugin/fastclick/fastclick.js") %>"></script>
+        <!-- AdminLTE App -->
+        <script src="<%: ResolveUrl("admintheme/dist/js/app.min.js") %>"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="<%: ResolveUrl("admintheme/dist/js/demo.js") %>"></script>
+    <style>
+        .form-submit {
+            margin:5px 15px 5px 0px;
+            width:200px;
+        }
+    </style>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<form id="form1" runat="server">
+<!-- Site wrapper -->
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a id="A1" runat="server" href="~/Admin/Default.aspx" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>A</b>LT</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Admin</b>LTE</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+          <li class="dropdown messages-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-envelope-o"></i>
+              <span class="label label-success">4</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 4 messages</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li><!-- start message -->
+                    <a href="#">
+                      <div class="pull-left">
+                        <asp:Image id="Image1" runat="server" ImageUrl="~/Admin/admintheme/dist/img/user2-160x160.jpg"/>
+                      </div>
+                      <h4>
+                        Support Team
+                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <!-- end message -->
+                </ul>
+              </li>
+              <li class="footer"><a href="#">See All Messages</a></li>
+            </ul>
+          </li>
+          <!-- Notifications: style can be found in dropdown.less -->
+          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning">10</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 10 notifications</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">View all</a></li>
+            </ul>
+          </li>
+          <!-- Tasks: style can be found in dropdown.less -->
+          <li class="dropdown tasks-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-flag-o"></i>
+              <span class="label label-danger">9</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 9 tasks</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Design some buttons
+                        <small class="pull-right">20%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">20% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                </ul>
+              </li>
+              <li class="footer">
+                <a href="#">View all tasks</a>
+              </li>
+            </ul>
+          </li>
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+             <asp:Image id="Image2" class="user-image" runat="server" ImageUrl="~/Admin/admintheme/dist/img/user2-160x160.jpg"/>
+              <span class="hidden-xs">Alexander Pierce</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+               <asp:Image id="Image3" class="user-image" runat="server" ImageUrl="~/Admin/admintheme/dist/img/user2-160x160.jpg"/>
+
+                <p>
+                  Alexander Pierce - Web Developer
+                  <small>Member since Nov. 2012</small>
+                </p>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Followers</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Sales</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Friends</a>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =============================================== -->
+
+  <!-- Left side column. contains the sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+         <asp:Image id="Image4" class="user-image" runat="server" ImageUrl="~/Admin/admintheme/dist/img/user2-160x160.jpg"/>
+        </div>
+        <div class="pull-left info">
+          <p>Alexander Pierce</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">MAIN NAVIGATION</li>
+        <li class="treeview">
+          <a id="A2" runat="server" href="Default.aspx">
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+          </a>          
+        </li>
+        <li class="treeview">
+          <a id="A3" runat="server" href="Product.aspx">
+            <i class="fa fa-files-o"></i>
+            <span>Sản phẩm</span>           
+          </a>         
+        </li>
+        <li>
+          <a id="A4" runat="server" href="Category.aspx">
+            <i class="fa fa-th"></i> 
+			<span>Danh mục</span>           
+          </a>
+        </li>
+        <li class="treeview">
+          <a id="A5" runat="server" href="Customer.aspx">
+            <i class="fa fa-pie-chart"></i>
+            <span>Khách hàng</span>           
+          </a>
+        </li>
+        <li class="treeview">
+          <a id="A6" runat="server" href="Invoice.aspx">
+            <i class="fa fa-laptop"></i>
+            <span>Hóa đơn</span>            
+          </a>
+        </li>
+        <li class="treeview">
+          <a id="A7" runat="server" href="Invoice-details.aspx">
+            <i class="fa fa-edit"></i> <span>Chi tiết hóa đơn</span>
+          </a></ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- =============================================== -->
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->    
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Default box -->
+      <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">
+              <asp:ContentPlaceHolder id="TitleAdminSite" runat="server">
+        
+            </asp:ContentPlaceHolder>
+          </h3>
+
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+              <i class="fa fa-minus"></i></button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+              <i class="fa fa-times"></i></button>
+          </div>
+        </div>
+        <div class="box-body">
+         <asp:ContentPlaceHolder id="AdminTheme" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+            <a id="A8" runat="server" href="~/Default.aspx">Trang chủ</a>
+        </div>
+        <!-- /.box-footer-->
+      </div>
+      <!-- /.box -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 1.0
+    </div>
+    <strong>Copyright &copy; 2016 <a href="http://sonptg.com">SonPTG</a>.</strong> All rights
+    reserved.
+  </footer>
+
+
+      </div>
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+
+ </form>
+</body>
+</html>

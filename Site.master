@@ -1,0 +1,160 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %>- My ASP.NET Application</title>
+    <link runat="server" href="~/Content/themeshop/css/style.css" rel="stylesheet"/>
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="Content/themeshop/js/jquery.min.js"></script>
+    <!-- start menu -->     
+    <link runat="server" href="~/Content/themeshop/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+    <link runat="server" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="<%: ResolveUrl("~/Content/js/megamenu.js") %>"></script>
+    <script>$(document).ready(function () { $(".megamenu").megamenu(); });</script>
+    <!-- end menu -->
+    <!-- top scrolling -->
+     <script src="<%: ResolveUrl("~/Content/themeshop/js/move-top.js") %>"></script>
+    <script src="<%: ResolveUrl("~/Content/themeshop/js/easing.js") %>"></script>
+   <script type="text/javascript">
+       jQuery(document).ready(function ($) {
+           $(".scroll").click(function (event) {
+               event.preventDefault();
+               $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
+           });
+       });
+	</script>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <asp:PlaceHolder runat="server">           
+        <script src="<%: ResolveUrl("~/Scripts/modernizr-2.5.3.js") %>"></script>
+    </asp:PlaceHolder>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form runat="server">
+    <asp:ScriptManager runat="server">
+        <Scripts>
+            <asp:ScriptReference Name="jquery" />
+            <asp:ScriptReference Name="jquery.ui.combined" />
+        </Scripts>
+    </asp:ScriptManager>
+    <div class="header-top">
+	 <div class="wrap"> 
+		<div class="logo">
+           <a id="A2" runat="server" href="~/"><asp:Image id="Image1" runat="server" ImageUrl="~/Content/themeshop/images/logo.png"/></a>
+	    </div>
+	    <div class="cssmenu" style="margin-left:10%;">
+		   <ul>
+			 <li class="active"> <a id="A3" runat="server" href="~/Account/Register.aspx">Đăng Ký</a></li> 
+			 <li><a id="A4" runat="server" href="~/Account/Login.aspx">Đăng Nhập</a></li> 
+             <li><a href="#">Giỏ Hàng</a></li> 
+		   </ul>
+		</div>
+		<ul class="icon2 sub-icon2 profile_img">
+			<li><a class="active-icon c2" href="#"> </a>
+				<ul class="sub-icon2 list">
+					<li><h3>Products</h3><a href=""></a></li>
+					<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
+				</ul>
+			</li>
+		</ul>
+		<div class="clear"></div>
+ 	</div>
+   </div>
+   <div class="header-bottom">
+   	<div class="wrap">
+   		<!-- start header menu -->
+		<ul class="megamenu skyblue">
+		    <li><a id="A1" class="color1" runat="server" href="~/">Trang Chủ</a></li>            
+			<li class="grid"><a id="A5" class="color2" runat="server" href="About.aspx">Giới Thiệu</a></li>
+  			<li class="active grid"><a class="color4" href="#">Đồ Nam</a></li>				
+			<li><a class="color5" href="#">Đồ Nữ</a></li>
+			<li><a class="color6" href="#">Đồ Công Sở</a></li>
+			<li><a class="color7" href="#">Đồ Trẻ Con</a></li>
+			<li><a class="color8" href="#">Đồ Giảm Giá</a></li>
+			<li><a class="color9" href="#">Khuyến Mãi</a>	</li>
+			<li><a id="A6" class="color10" runat="server" href="Contact.aspx">Liên hệ</a></li>
+		   </ul>
+		   <div class="clear"></div>
+     	</div>
+       </div> 
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />            
+             <div class="main">
+                <div class="wrap">
+             	 <asp:ContentPlaceHolder runat="server" ID="MainContent" /> 
+			 </div>
+        </div>
+        <div class="footer">
+       	  <div class="footer-top">
+       		<div class="wrap">
+       			   <div class="col_1_of_footer-top span_1_of_footer-top">
+				  	 <ul class="f_list">
+				  	 	<li><asp:Image id="Image3" runat="server" ImageUrl="~/Content/themeshop/images/f_icon.png"/><span class="delivery">Free Ship cho những đơn hàng từ 400k</span></li>
+				  	 </ul>
+				   </div>
+				   <div class="col_1_of_footer-top span_1_of_footer-top">
+				  	<ul class="f_list">
+				  	 	<li><asp:Image id="Image4" runat="server" ImageUrl="~/Content/themeshop/images/f_icon1.png"/><span class="delivery">Liên hệ bán hàng :<span class="orange"> 0973 954 663 (Miễn Phí)</span></span></li>
+				  	 </ul>
+				   </div>
+				   <div class="col_1_of_footer-top span_1_of_footer-top">
+				  	<ul class="f_list">
+				  	 	<li><asp:Image id="Image5" runat="server" ImageUrl="~/Content/themeshop/images/f_icon2.png"/><span class="delivery">Đổi trả trong vòng 7 ngày</span></li>
+				  	 </ul>
+				   </div>
+				  <div class="clear"></div>
+			 </div>
+       	 </div>
+       	 <div class="footer-middle">
+       	 	<div class="wrap">
+       	 		<div class="section group">
+				<div class="col_1_of_middle span_1_of_middle">
+					<dl id="sample" class="dropdown">
+			        <dt><a href="#"><span>Chọn khu vực</span></a></dt>			        
+   				    </dl>
+   				 </div>
+				<div class="col_1_of_middle span_1_of_middle">
+					<ul class="f_list1">
+						<li><span class="m_8">Nhận tin khuyến mãi từ email</span>
+						<div class="search">	  
+							<input style="width:80%;" type="text" name="s" class="textbox" value="Email@gmail.com" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+							<input type="submit" value="Subscribe" id="submit" name="submit">
+							<div id="response"> </div>
+			 			</div><div class="clear"></div>
+			 		    </li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			   </div>
+       	 	</div>
+       	 </div>
+       	 <div class="copy">
+       	   <div class="wrap">
+       	   	  <p>© All rights reserved | Edit by&nbsp;<a href="http://sonptg.com"> SonNguyenPTG</a></p>
+       	   </div>
+       	 </div>
+       </div>
+       <script type="text/javascript">
+           $(document).ready(function () {
+
+               var defaults = {
+                   containerID: 'toTop', // fading element id
+                   containerHoverID: 'toTopHover', // fading element hover id
+                   scrollSpeed: 1200,
+                   easingType: 'linear'
+               };
+
+
+               $().UItoTop({ easingType: 'easeOutQuart' });
+
+           });
+		</script>
+        <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+         
+       
+         </form>
+</body>
